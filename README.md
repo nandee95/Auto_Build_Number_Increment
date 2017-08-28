@@ -38,7 +38,6 @@ Include the generated header in your source:
 Use the BUILD_NUMBER macro in your code.
 <h1>Altering default values:</h1>
 <h2>Possible inputs</h2>
-<b>Values:</b>
 <table>
 	<thead>
 		<tr>
