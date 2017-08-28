@@ -3,7 +3,7 @@ This script generates a header file contains the recent build build number as a 
 
 **Files will be uploaded later**
 
-<h1>Supported languages</h1>
+<h1>Supported languages:</h1>
 <table>
 	<thead>
 		<tr>
@@ -52,7 +52,7 @@ Use the BUILD_NUMBER macro in your code.
 	<tr><td>CACHE_FILENAME</td><td>STRING</td><td>No</td><td>CMakeBuildNumber.txt</td><td>Alters the default filename for the cache file.</td></tr>
 </table>
 
-<h2>Altering values</h2>
+<h2>Altering values:</h2>
 <b>Warning:</b> -P always have to be on the last place!
 
 You can define them by adding more parameters to the command. For more information check the documentation of <a href="https://cmake.org/cmake/help/v3.2/command/add_custom_command.html">add_custom_command</a>.
@@ -69,5 +69,5 @@ The following is an example where all of the possible parameters are defined/alt
 		-P "${CMAKE_SOURCE_DIR}/build_number.cmake"
 )</pre>
 
-<h1>License</h1>
+<h1>License:</h1>
 <i>MIT license</i>
