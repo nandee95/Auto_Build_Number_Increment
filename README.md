@@ -36,7 +36,7 @@ Add build_number.h to your target. And create a blank build_number.h in your sou
 Include the generated header in your source:
 <pre>#include "build_number.h"</pre>
 Use the BUILD_NUMBER macro in your code.
-<h1>Altering default values</h1>
+<h1>Altering default values:</h1>
 <h2>Possible inputs</h2>
 <b>Values:</b>
 <table>
@@ -52,7 +52,7 @@ Use the BUILD_NUMBER macro in your code.
 	<tr><td>CACHE_FILENAME</td><td>STRING</td><td>No</td><td>CMakeBuildNumber.txt</td><td>Alters the default filename for the cache file.</td></tr>
 </table>
 
-<h2>Altering values:</h2>
+<h2>Altering values</h2>
 <b>Warning:</b> -P always have to be on the last place!
 
 You can define them by adding more parameters to the command. For more information check the documentation of <a href="https://cmake.org/cmake/help/v3.2/command/add_custom_command.html">add_custom_command</a>.
