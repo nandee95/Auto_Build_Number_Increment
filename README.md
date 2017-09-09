@@ -27,8 +27,8 @@ Copy build_number.cmake to your source directory and add this code to your CMake
 	TARGET project_name_goes_here
 	PRE_BUILD
 	COMMAND ${CMAKE_COMMAND}
-		-DSOURCE_DIR:PATH="${CMAKE_SOURCE_DIR}"
-		-DFILES_DIR:PATH="${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}"
+		-DHEADER_DIR:PATH="${CMAKE_SOURCE_DIR}"
+		-DCACHE_DIR:PATH="${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}"
 		-P "${CMAKE_SOURCE_DIR}/build_number.cmake"
 )</pre>
 Add build_number.h to your target. And create a blank build_number.h in your source directory otherwise CMake wont configure.
