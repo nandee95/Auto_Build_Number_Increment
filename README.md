@@ -45,7 +45,7 @@ Use the BUILD_NUMBER macro in your code.
 	</thead>
 	<tr><td>LANGUAGE</td><td>STRING</td><td><b>Yes</b></td><td>-</td><td>Defines the used language. (This information is used to determine the header's extension.)</td></tr>
 	<tr><td>HEADER_DIR</td><td>PATH</td><td><b>Yes</b></td><td>-</td><td>Specifies a path for the header.</td></tr>
-	<tr><td>HEADER_FILENAME</td><td>STRING</td><td>No</td><td>buildnumber</td><td>Alters the default filename for the header.<br>The extension depends on the detected language. No extension needed here.</td></tr>
+	<tr><td>HEADER_FILENAME</td><td>STRING</td><td>No</td><td>buildnumber</td><td>Alters the default filename for the header.<br>The extension depends on the determined language. No extension needed here.</td></tr>
 	<tr><td>HEADER_MACRO</td><td>STRING</td><td>No</td><td>BUILD_NUMBER</td><td>Alters the default macro's name in the header.</td></tr>
 	<tr><td>CACHE_DIR</td><td>PATH</td><td><b>Yes</b></td><td>-</td><td>Specifies the path for the cache file.</td></tr>
 	<tr><td>CACHE_FILENAME</td><td>STRING</td><td>No</td><td>CMakeBuildNumber.txt</td><td>Alters the default filename for the cache file.</td></tr>
