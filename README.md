@@ -1,8 +1,6 @@
 <h1>Description:</h1>
 This script generates a header file contains the recent build build number as a macro. This is a platform and compiler independent solution The code also contains basic error checking and provides feedback at the build console.
 
-**Files will be uploaded later**
-
 <h1>Supported languages:</h1>
 <table>
 	<thead>
@@ -27,9 +25,10 @@ Copy build_number.cmake to your source directory and add this code to your CMake
 	TARGET project_name_goes_here
 	PRE_BUILD
 	COMMAND ${CMAKE_COMMAND}
+		-DLANGUAGE:STRING="C"
 		-DHEADER_DIR:PATH="${CMAKE_SOURCE_DIR}"
 		-DCACHE_DIR:PATH="${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}"
-		-P "${CMAKE_SOURCE_DIR}/build_number.cmake"
+		-P "${MASTER_DIR}/build_number.cmake"
 )</pre>
 Add build_number.h to your target. And create a blank build_number.h in your source directory otherwise CMake wont configure.
 <h2>2. Adding build number to the project</h2>
@@ -60,6 +59,7 @@ The following is an example where all of the possible parameters are defined/alt
 	TARGET project_name_goes_here
 	PRE_BUILD
 	COMMAND ${CMAKE_COMMAND}
+		-DLANGUAGE:STRING="CXX"
 		-DHEADER_DIR:PATH="${CMAKE_SOURCE_DIR}/Build"
 		-DCACHE_DIR:PATH="${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/Caches"
 		-DHEADER_FILENAME:STRING="BuildNo"
