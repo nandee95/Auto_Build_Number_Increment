@@ -43,6 +43,7 @@ Use the BUILD_NUMBER macro in your code.
 		<td><b>Name</b></td><td><b>Type</b></td><td><b>Required</b></td><td><b>Default value</b></td><td><b>Description</b></td>
 		</tr>
 	</thead>
+	<tr><td>LANGUAGE</td><td>STRING</td><td><b>Yes</b></td><td>-</td><td>Defines the used language. (This information is used to determine the header's extension.)</td></tr>
 	<tr><td>HEADER_DIR</td><td>PATH</td><td><b>Yes</b></td><td>-</td><td>Specifies a path for the header.</td></tr>
 	<tr><td>HEADER_FILENAME</td><td>STRING</td><td>No</td><td>buildnumber</td><td>Alters the default filename for the header.<br>The extension depends on the detected language. No extension needed here.</td></tr>
 	<tr><td>HEADER_MACRO</td><td>STRING</td><td>No</td><td>BUILD_NUMBER</td><td>Alters the default macro's name in the header.</td></tr>
