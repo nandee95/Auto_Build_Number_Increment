@@ -52,7 +52,7 @@ Use the BUILD_NUMBER macro in your code.
 </table>
 
 <h2>Altering values</h2>
-<b>Warning:</b> -P always have to be on the last place!
+<b>Warning:</b> -P always has to be on the last place!
 
 You can define them by adding more parameters to the command. For more information check the documentation of <a href="https://cmake.org/cmake/help/v3.2/command/add_custom_command.html">add_custom_command</a>.
 The following is an example where all of the possible parameters are defined/altered:
