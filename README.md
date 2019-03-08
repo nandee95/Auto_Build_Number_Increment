@@ -21,15 +21,15 @@ Note that the following is a minimal C/C++ example. You can find more complete e
 <h2>1. Setting up CMake</h2>
 Copy build_number.cmake to your source directory and add this code to your CMakeLists.txt
 (don't forget to specify the target)
-<pre>add_custom_command(
-	TARGET project_name_goes_here
-	PRE_BUILD
+<pre>add_custom_target(
+	version
 	COMMAND ${CMAKE_COMMAND}
 		-DLANGUAGE:STRING="C"
 		-DHEADER_DIR:PATH="${CMAKE_SOURCE_DIR}"
 		-DCACHE_DIR:PATH="${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}"
 		-P "${MASTER_DIR}/build_number.cmake"
-)</pre>
+)
+add_dependencies(project_name_goes_here version)</pre>
 Add build_number.h to your target. And create a blank build_number.h in your source directory otherwise CMake wont configure.
 <h2>2. Adding build number to the project</h2>
 Include the generated header in your source:
@@ -57,8 +57,7 @@ Use the BUILD_NUMBER macro in your code.
 You can define them by adding more parameters to the command. For more information check the documentation of <a href="https://cmake.org/cmake/help/v3.2/command/add_custom_command.html">add_custom_command</a>.
 The following is an example where all of the possible parameters are defined/altered:
 <pre>add_custom_command(
-	TARGET project_name_goes_here
-	PRE_BUILD
+	version
 	COMMAND ${CMAKE_COMMAND}
 		-DLANGUAGE:STRING="CXX"
 		-DHEADER_DIR:PATH="${CMAKE_SOURCE_DIR}/Build"
